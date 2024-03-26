@@ -49,7 +49,7 @@ subscription.cancel();
 ```dart
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:simple_event_notifier/event_notifier.dart';
+import 'package:simple_event_notifier/simple_event_notifier.dart';
 void main() {
   runApp(const MyApp());
 }

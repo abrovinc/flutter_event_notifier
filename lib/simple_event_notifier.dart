@@ -1,4 +1,4 @@
-library event_notifier;
+library simple_event_notifier;
 
 import 'dart:async';
 
