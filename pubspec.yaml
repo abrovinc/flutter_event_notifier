@@ -1,7 +1,11 @@
 name: simple_event_notifier
 description: "Simple Event Notifier"
-version: 0.0.1
-homepage: "https://www.abrovinc.com"
+version: 0.0.2
+homepage: "https://github.com/abrovinc/flutter_simple_event_notifier"
+
+repository: https://github.com/abrovinc/flutter_simple_event_notifier
+issue_tracker: https://github.com/abrovinc/flutter_simple_event_notifier/issues
+contributors: Steve Widinghoff <Nosfert>
 
 environment:
   sdk: '>=3.3.1 <4.0.0'

@@ -108,6 +108,3 @@ Does not support event payloads out of the box. You can extend the library to ha
 ## Feedback and Contributions
 Feedback, bug reports, and contributions are welcome! 
 If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on GitHub.
-
-License
-This library is available under the MIT license. See the [LICENSE](LICENSE) file for more details.
