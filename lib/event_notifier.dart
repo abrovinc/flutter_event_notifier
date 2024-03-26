@@ -1,4 +1,4 @@
-library flutter_event_notifier;
+library event_notifier;
 
 import 'dart:async';
 
@@ -12,16 +12,16 @@ class EventNotifier {
   final StreamController<String> _publisher =
       StreamController<String>.broadcast();
 
-  void notifyEventId(String eventId) {
-    _publisher.sink.add(eventId);
+  static void notify(String eventId) {
+    instance._publisher.sink.add(eventId);
   }
-}
 
-StreamSubscription<String> callbackOnNotify(
-    final String eventId, final void Function() callback) {
-  return EventNotifier.instance._publisher.stream.listen((streamEventId) {
-    if (streamEventId == eventId) {
-      callback();
-    }
-  });
+  static StreamSubscription<String> receive(
+      final String eventId, final void Function() callback) {
+    return instance._publisher.stream.listen((streamEventId) {
+      if (streamEventId == eventId) {
+        callback();
+      }
+    });
+  }
 }

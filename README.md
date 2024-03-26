@@ -8,7 +8,7 @@ To use Flutter Event Notifier in your Flutter project, add the following depende
 
 ```yaml
 dependencies:
-  flutter_event_notifier: ^1.0.0
+  event_notifier: ^0.0.1
 ```
 
 Then, run flutter pub get to install the package.
@@ -18,17 +18,17 @@ Then, run flutter pub get to install the package.
 Import the flutter_event_notifier library into your Dart file.
 
 ```dart
-import 'package:flutter_event_notifier/event_notifier.dart';
+import 'package:event_notifier/event_notifier.dart';
 ```
 
-Initialize an instance of EventNotifier.
+Initialize an singleton instance of EventNotifier.
 ```dart
 EventNotifier notifier = EventNotifier.instance;
 ```
 
 Subscribe to events and specify a callback function to handle the event.
 ```dart
-StreamSubscription<String> subscription = subscribeAndActOnMessage('my_event_id', () {
+StreamSubscription<String> subscription = EventNotifier.receive('my_event_id', () {
   // Handle the event
 });
 ```
@@ -36,7 +36,7 @@ StreamSubscription<String> subscription = subscribeAndActOnMessage('my_event_id'
 Notify events using notifyEventId().
 
 ```dart
-notifier.notifyEventId('my_event_id');
+EventNotifier.notify('my_event_id');
 ```
 
 Don't forget to cancel the subscription when it's no longer needed.
@@ -49,7 +49,7 @@ subscription.cancel();
 ```dart
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_event_notifier/event_notifier.dart';
+import 'package:event_notifier/event_notifier.dart';
 
 void main() {
   runApp(const MyApp());
@@ -67,7 +67,7 @@ class MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    subscription = callbackOnNotify('button_pressed', eventTriggerCallback);
+    subscription = EventNotifier.receive('button_pressed', eventTriggerCallback);
   }
 
   @override
@@ -90,7 +90,7 @@ class MyAppState extends State<MyApp> {
         body: Center(
           child: TextButton(
             onPressed: () {
-              EventNotifier.instance.notifyEventId('button_pressed');
+              EventNotifier.notify('button_pressed');
             },
             child: Text('Press me'),
           ),
