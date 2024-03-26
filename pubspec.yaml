@@ -1,5 +1,5 @@
-name: event_notifier
-description: "Event Notifier"
+name: simple_event_notifier
+description: "Simple Event Notifier"
 version: 0.0.1
 homepage: "https://www.abrovinc.com"
 

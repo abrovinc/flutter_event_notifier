@@ -8,17 +8,17 @@ To use Flutter Event Notifier in your Flutter project, add the following depende
 
 ```yaml
 dependencies:
-  event_notifier: ^0.0.1
+  simple_event_notifier: ^0.0.1
 ```
 
 Then, run flutter pub get to install the package.
 
 
 ## Usage
-Import the flutter_event_notifier library into your Dart file.
+Import the flutter_simple_event_notifier library into your Dart file.
 
 ```dart
-import 'package:event_notifier/event_notifier.dart';
+import 'package:simple_event_notifier/simple_event_notifier.dart';
 ```
 
 Initialize an singleton instance of EventNotifier.
@@ -49,8 +49,7 @@ subscription.cancel();
 ```dart
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:event_notifier/event_notifier.dart';
-
+import 'package:simple_event_notifier/event_notifier.dart';
 void main() {
   runApp(const MyApp());
 }
