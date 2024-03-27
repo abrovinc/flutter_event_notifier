@@ -1,6 +1,5 @@
 import 'dart:async';
-
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 import 'package:simple_event_notifier/simple_event_notifier.dart';
 
 void main() {

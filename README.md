@@ -3,12 +3,14 @@
 ## Introduction
 Flutter Event Notifier is a simple library designed to facilitate event notification and subscription management in Flutter applications. It provides a convenient way to notify components of specific events and subscribe to those events with callbacks.
 
+Its a independent solution to trigger a callback function whenever a specific eventID has been published on a event queue. 
+
 ## Installation
 To use Flutter Event Notifier in your Flutter project, add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  simple_event_notifier: ^0.0.1
+  simple_event_notifier: ^0.0.3
 ```
 
 Then, run flutter pub get to install the package.

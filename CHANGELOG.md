@@ -1,3 +1,6 @@
+## 0.0.3
+Changed so it's a Dart library. 
+
 ## 0.0.2
 Updated readme, added example and references to github
 
